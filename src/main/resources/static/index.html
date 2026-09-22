@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="API Sentinel - API Security Testing Platform">
+
+    <title>API Sentinel | API Security Testing Platform</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="navbar-left">
+
+        <div class="logo">
+            🛡️ <span>API SENTINEL</span>
+        </div>
+
+        <div class="online-status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+
+    </div>
+
+
+    <div class="tagline">
+
+        API Security Testing Platform
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN CONTAINER
+===================================================== -->
+
+<main class="container">
+
+
+
+    <!-- =================================================
+         LOGIN SECTION
+    ================================================== -->
+
+    <section class="scan-section login-section"
+             id="loginSection">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    AUTHENTICATION
+                </span>
+
+                <h2>
+                    🔐 Secure Login
+                </h2>
+
+                <p class="description">
+                    Authenticate to access protected API
+                    security scanning features.
+                </p>
+
+            </div>
+
+            <div class="security-icon">
+                🔒
+            </div>
+
+        </div>
+
+
+        <div class="scan-form">
+
+            <div class="input-wrapper">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter username"
+                    autocomplete="username"
+                >
+
+            </div>
+
+
+            <div class="input-wrapper">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    autocomplete="current-password"
+                >
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                onclick="login()">
+
+                🔑 LOGIN
+
+            </button>
+
+        </div>
+
+
+        <div id="loginMessage"
+             class="message">
+        </div>
+
+    </section>
+
+
+
+
+    <!-- =================================================
+         HERO SECTION
+    ================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                🛡️ SECURITY ANALYSIS PLATFORM
+            </div>
+
+
+            <h1>
+
+                API Security
+                <span>Dashboard</span>
+
+            </h1>
+
+
+            <p>
+
+                Discover common API security
+                configuration issues with automated
+                security analysis, scoring and
+                vulnerability detection.
+
+            </p>
+
+
+            <div class="hero-features">
+
+                <div class="hero-feature">
+
+                    <span>✓</span>
+                    Security Headers
+
+                </div>
+
+                <div class="hero-feature">
+
+                    <span>✓</span>
+                    HTTPS Analysis
+
+                </div>
+
+                <div class="hero-feature">
+
+                    <span>✓</span>
+                    Risk Assessment
+
+                </div>
+
+                <div class="hero-feature">
+
+                    <span>✓</span>
+                    Scan History
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-shield">
+
+            <div class="shield-circle">
+
+                🛡️
+
+            </div>
+
+            <span>
+                API
+            </span>
+
+            <strong>
+                SECURITY
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- =================================================
+         DASHBOARD STATS
+    ================================================== -->
+
+    <section class="stats">
+
+
+        <!-- Security Score -->
+
+        <div class="card stat-card">
+
+            <div class="stat-icon">
+                🎯
+            </div>
+
+            <div class="stat-content">
+
+                <h3>
+                    Security Score
+                </h3>
+
+                <div id="securityScore"
+                     class="score">
+
+                    --
+
+                </div>
+
+                <p>
+                    Latest Scan
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Risk Level -->
+
+        <div class="card stat-card">
+
+            <div class="stat-icon">
+                ⚠️
+            </div>
+
+            <div class="stat-content">
+
+                <h3>
+                    Risk Level
+                </h3>
+
+                <div id="riskLevel"
+                     class="risk">
+
+                    --
+
+                </div>
+
+                <p>
+                    Latest Scan
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Total Scans -->
+
+        <div class="card stat-card">
+
+            <div class="stat-icon">
+                📊
+            </div>
+
+            <div class="stat-content">
+
+                <h3>
+                    Total Scans
+                </h3>
+
+                <div id="totalScans"
+                     class="score">
+
+                    --
+
+                </div>
+
+                <p>
+                    Scan History
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- =================================================
+         SCANNER SECTION
+    ================================================== -->
+
+    <section class="scan-section scanner-section">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    SECURITY SCANNER
+                </span>
+
+                <h2>
+                    🔍 Scan API Endpoint
+                </h2>
+
+                <p class="description">
+
+                    Enter an API endpoint that you are
+                    authorized to test. API Sentinel will
+                    analyze its security configuration.
+
+                </p>
+
+            </div>
+
+
+            <div class="scanner-status">
+
+                <span class="status-dot"></span>
+
+                READY
+
+            </div>
+
+        </div>
+
+
+
+        <div class="scanner-input-area">
+
+            <div class="input-wrapper">
+
+                <label for="apiUrl">
+                    API Endpoint URL
+                </label>
+
+                <input
+                    type="text"
+                    id="apiUrl"
+                    placeholder="http://localhost:8080/api/health"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <button
+                class="primary-button scan-button"
+                onclick="scanApi()">
+
+                🔍 SCAN API
+
+            </button>
+
+        </div>
+
+
+        <div class="scanner-note">
+
+            <span>🔒</span>
+
+            Only scan APIs that you own or have explicit
+            authorization to test.
+
+        </div>
+
+
+        <div id="scanMessage"
+             class="message">
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- =================================================
+         LATEST SCAN RESULT
+    ================================================== -->
+
+    <section class="result-section">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    SECURITY REPORT
+                </span>
+
+                <h2>
+                    📋 Latest Scan Result
+                </h2>
+
+                <p class="description">
+
+                    Detailed information from the most
+                    recent API security scan.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="latestResult"
+             class="result-card">
+
+
+            <div class="empty-state">
+
+                <div class="empty-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    No Scan Performed
+                </h3>
+
+                <p>
+
+                    Login and scan an API endpoint to
+                    generate your first security report.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- =================================================
+         SCAN HISTORY
+    ================================================== -->
+
+    <section class="history-section">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    ACTIVITY
+                </span>
+
+                <h2>
+                    📊 Scan History
+                </h2>
+
+                <p class="description">
+
+                    Review previously completed API
+                    security scans.
+
+                </p>
+
+            </div>
+
+
+            <div class="history-badge">
+
+                🗄️ DATABASE
+
+            </div>
+
+        </div>
+
+
+        <div id="historyContainer">
+
+            <div class="empty-state">
+
+                <div class="empty-icon">
+                    🔐
+                </div>
+
+                <h3>
+                    Authentication Required
+                </h3>
+
+                <p>
+                    Login to load your scan history.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- =================================================
+         SECURITY INFORMATION
+    ================================================== -->
+
+    <section class="security-info">
+
+
+        <div class="security-info-icon">
+            🛡️
+        </div>
+
+
+        <div>
+
+            <h3>
+                API Sentinel Security Checks
+            </h3>
+
+            <p>
+
+                API Sentinel analyzes HTTP responses for
+                common security configuration issues
+                including HTTPS usage, security headers,
+                server information disclosure and
+                HTTP server errors.
+
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+</main>
+
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div class="footer-brand">
+
+            🛡️
+
+            <strong>
+                API SENTINEL
+            </strong>
+
+        </div>
+
+
+        <p>
+
+            API Security Testing Platform
+
+        </p>
+
+
+        <p class="footer-warning">
+
+            ⚠️ Authorized Security Testing Only
+
+        </p>
+
+
+        <p class="copyright">
+
+            API Sentinel © 2026
+
+        </p>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
