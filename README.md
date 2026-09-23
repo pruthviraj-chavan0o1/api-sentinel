@@ -197,4 +197,4 @@ The dashboard provides:
 │     1      │     4      │      2     │      3       │
 
 └────────────┴────────────┴────────────┴──────────────┘
-
+Built with Spring Boot to monitor and secure APIs.
