@@ -198,3 +198,25 @@ The dashboard provides:
 
 └────────────┴────────────┴────────────┴──────────────┘
 Built with Spring Boot to monitor and secure APIs.
+
+---
+
+## 👨‍💻 Author
+
+**Pruthviraj Chavan**
+
+BE Computer Engineering Student  
+Java Full Stack Development | Cybersecurity Enthusiast
+
+### GitHub
+https://github.com/pruthviraj-chavan0o1
+
+### LinkedIn
+https://linkedin.com/in/pruthviraj-chavan-0527313a9/
+
+---
+
+## ⭐ Project
+
+API Sentinel is developed as a learning and portfolio project focused on
+API security, Spring Boot, authentication, and vulnerability assessment.
