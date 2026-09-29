@@ -180,7 +180,6 @@ The dashboard provides:
 
 \- Scan information
 
-\- OWASP summary
 
 
 
