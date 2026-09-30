@@ -186,9 +186,6 @@ The dashboard provides:
 \### OWASP Summary
 
 
-
-```text
-
 ┌────────────┬────────────┬────────────┬──────────────┐
 
 │  DETECTED  │  POTENTIAL │ NOT DETECTED│ NOT TESTABLE │
