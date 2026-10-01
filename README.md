@@ -178,10 +178,6 @@ The dashboard provides:
 
 \- Security headers
 
-\- Scan information
-
-
-
 
 \### OWASP Summary
 
